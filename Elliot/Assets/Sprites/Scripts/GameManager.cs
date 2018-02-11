@@ -29,6 +29,15 @@ public class GameManager : Singleton<GameManager> {
         }
     }
 
+    
+    public ObjectPool Pool { get; set; }
+
+
+    private void Awake()
+    {
+        Pool = GetComponent<ObjectPool>();
+    }
+
 
     // Use this for initialization
     void Start () {
@@ -67,4 +76,16 @@ public class GameManager : Singleton<GameManager> {
 
 		}
 	}
+
+    public void StartWave()
+    {
+        StartCoroutine(SpawnWave());
+
+
+    }
+
+    private IEnumerator SpawnWave()
+    {
+        yield return new WaitForSeconds(2.5f);
+    }
 }
