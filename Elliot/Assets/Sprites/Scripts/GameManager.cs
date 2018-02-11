@@ -1,18 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager> {
 
+    private int currency;
+
+    [SerializeField]
+    private Text currencyTxt;
 
 	public TowerBtn ClickedBtn{
 		get;
 		set;
 	}
 
-		
-	// Use this for initialization
-	void Start () {
+    public int Currency
+    {
+        get
+        {
+            return currency;
+        }
+
+        set
+        {
+            currency = value;
+            currencyTxt.text = value.ToString() + " <color=yellow>gold</color>";
+        }
+    }
+
+
+    // Use this for initialization
+    void Start () {
+        Currency = 5;
 		
 	}
 	
@@ -22,14 +42,24 @@ public class GameManager : Singleton<GameManager> {
 		
 	}
 	public void PickTower(TowerBtn towerBtn){
-		this.ClickedBtn = towerBtn;
-		Hover.Instance.Activate (towerBtn.Sprite);
+
+        if(Currency >= towerBtn.Price)
+        {
+            this.ClickedBtn = towerBtn;
+            Hover.Instance.Activate(towerBtn.Sprite);
+
+        }
+		
 	}
 
 	public void BuyTower(){
-		Hover.Instance.Deactivate ();
+        if (Currency >= ClickedBtn.Price)
+        {
+            Currency -= ClickedBtn.Price;
+            Hover.Instance.Deactivate();
+        }
 
-	}
+    }
 
 	private void HandleEscape(){
 		if (Input.GetKeyDown (KeyCode.Escape)) {

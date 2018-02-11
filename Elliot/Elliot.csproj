@@ -84,7 +84,6 @@
     <Compile Include="Assets\Sprites\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Sprites\Scripts\Point.cs" />
     <Compile Include="Assets\Sprites\Scripts\Singleton.cs" />
-    <Compile Include="Assets\Sprites\Scripts\TESTSCRIPT.cs" />
     <Compile Include="Assets\Sprites\Scripts\TileScript.cs" />
     <Compile Include="Assets\Sprites\Scripts\TowerBtn.cs" />
   </ItemGroup>
