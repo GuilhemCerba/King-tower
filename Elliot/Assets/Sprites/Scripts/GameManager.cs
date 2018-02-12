@@ -41,7 +41,7 @@ public class GameManager : Singleton<GameManager> {
 
     // Use this for initialization
     void Start () {
-        Currency = 5;
+        Currency = 50000;
 		
 	}
 	
@@ -91,6 +91,7 @@ public class GameManager : Singleton<GameManager> {
         type = "Goblin";
         Monster monster = Pool.GetObject(type).GetComponent<Monster>();
         monster.Spawn();
+        //monster.Move();
 
         yield return new WaitForSeconds(2.5f);
     }

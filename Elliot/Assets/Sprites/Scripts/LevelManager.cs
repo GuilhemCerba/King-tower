@@ -33,6 +33,7 @@ public class LevelManager : Singleton<LevelManager>{
 
 	void Start(){
 		createLevel ();
+        nextLevel();
 	}
 
 	void Update(){
@@ -42,7 +43,7 @@ public class LevelManager : Singleton<LevelManager>{
 	private void createLevel(){
 
 		Tiles = new Dictionary<Point,TileScript> ();
-		string[] mapData = ReadLevelText();
+		string[] mapData = ReadLevelText("Level");
 
 
 		int mapXSize = mapData[0].ToCharArray().Length;
@@ -74,8 +75,8 @@ public class LevelManager : Singleton<LevelManager>{
 
 	}
 
-	private string[] ReadLevelText(){
-		TextAsset leveldata = Resources.Load ("Level") as TextAsset;
+	private string[] ReadLevelText(string textDoc){
+		TextAsset leveldata = Resources.Load (textDoc) as TextAsset;
 		string tempData = leveldata.text.Replace (Environment.NewLine, string.Empty);
 
 		return tempData.Split ('-');
@@ -92,4 +93,37 @@ public class LevelManager : Singleton<LevelManager>{
 		Instantiate (kingPrefab, Tiles[king].GetComponent<TileScript>().WorldPosition, Quaternion.identity);
 
 	}
+
+    private void nextLevel()
+    {
+        StartCoroutine(levelCreator());
+    }
+
+    IEnumerator levelCreator()
+    {
+        yield return new WaitForSeconds(5);
+
+        string[] mapData = ReadLevelText("Level1");
+
+
+        int mapXSize = mapData[0].ToCharArray().Length;
+        int mapYSize = mapData.Length;
+        Vector3 maxTile = Vector3.zero;
+
+        Vector3 start = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height));
+
+        for (int y = 0; y < mapYSize; y++)
+        {
+            char[] newTiles = mapData[y].ToCharArray();
+
+            for (int x = 0; x < mapXSize; x++)
+            {
+                PlaceTile(newTiles[x].ToString(), x, y+9, start);
+
+            }
+        }
+        maxTile = Tiles[new Point(mapXSize - 1, mapYSize - 1)].transform.transform.position;
+
+        cameraMovement.SetLimits(new Vector3(maxTile.x + TileSize, maxTile.y - TileSize -17));
+    }
 }
