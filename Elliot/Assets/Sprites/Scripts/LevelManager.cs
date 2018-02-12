@@ -19,7 +19,10 @@ public class LevelManager : Singleton<LevelManager>{
 	[SerializeField]
 	private GameObject entrancePortalPrefab;
 
-	[SerializeField]
+    
+    public Portal EntrancePortal { get; set; }
+
+    [SerializeField]
 	private GameObject kingPrefab;
 
 	public Dictionary<Point,TileScript> Tiles { get; set; }
@@ -79,10 +82,13 @@ public class LevelManager : Singleton<LevelManager>{
 	}
 
 	private void spawnPortals(){
-		entrancePortal = new Point (0, 0);
-		Instantiate (entrancePortalPrefab, Tiles [entrancePortal].GetComponent<TileScript>().WorldPosition, Quaternion.identity);
+		entrancePortal = new Point (11, 8);
+		GameObject temp = (GameObject) Instantiate (entrancePortalPrefab, Tiles [entrancePortal].GetComponent<TileScript>().WorldPosition, Quaternion.identity);
+        EntrancePortal = temp.GetComponent<Portal>();
+        EntrancePortal.name = "EntrancePortal";
 
-		king = new Point (11, 6);
+
+		king = new Point (8, 0);
 		Instantiate (kingPrefab, Tiles[king].GetComponent<TileScript>().WorldPosition, Quaternion.identity);
 
 	}

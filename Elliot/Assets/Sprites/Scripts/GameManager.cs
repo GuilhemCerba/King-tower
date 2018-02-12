@@ -86,6 +86,12 @@ public class GameManager : Singleton<GameManager> {
 
     private IEnumerator SpawnWave()
     {
+        int monsterIndex = 0;
+        string type = string.Empty;
+        type = "Goblin";
+        Monster monster = Pool.GetObject(type).GetComponent<Monster>();
+        monster.Spawn();
+
         yield return new WaitForSeconds(2.5f);
     }
 }

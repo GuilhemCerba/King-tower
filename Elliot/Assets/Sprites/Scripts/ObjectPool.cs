@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour {
     
+    [SerializeField]
     private GameObject[] objectPrefabs ;
 
     public GameObject GetObject(string type)
@@ -14,6 +15,10 @@ public class ObjectPool : MonoBehaviour {
             {
                 GameObject newObject = Instantiate(objectPrefabs[i]);
                 newObject.name = type;
+
+                //TO SUPPRESS
+                //newObject.transform.position = new Vector3(350,350,0);
+
                 return newObject;
             }
         }

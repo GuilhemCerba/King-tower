@@ -286,14 +286,17 @@
     <Compile Include="Assets\Sprites\Scripts\GameManager.cs" />
     <Compile Include="Assets\Sprites\Scripts\Hover.cs" />
     <Compile Include="Assets\Sprites\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Sprites\Scripts\Monster.cs" />
     <Compile Include="Assets\Sprites\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Sprites\Scripts\Point.cs" />
+    <Compile Include="Assets\Sprites\Scripts\Portal.cs" />
     <Compile Include="Assets\Sprites\Scripts\Singleton.cs" />
     <Compile Include="Assets\Sprites\Scripts\TileScript.cs" />
     <Compile Include="Assets\Sprites\Scripts\TowerBtn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Level.txt" />
+    <None Include="Assets\Resources\Level1.txt" />
     <None Include="Assets\Sprites\Imported sprites\Mobs\Copyright.txt" />
     <None Include="Assets\Sprites\Imported sprites\Mobs\Gobelin\Copyright.txt" />
   </ItemGroup>
