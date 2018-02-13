@@ -148,7 +148,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 35, y: -80.4}
-  m_SizeDelta: {x: 58.83, y: 22.79}
+  m_SizeDelta: {x: 57, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60323429
 MonoBehaviour:
@@ -210,7 +210,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2 gold
+  m_Text: 5 gold
 --- !u!222 &60323432
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 887301f8315a5864eaafd708986309b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d71b13d780d914c65b307efc4e845816, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -351,9 +351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edeeda8306cf34846a2fb7e8de500afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 1494441876796052, guid: a6a01d65ee2848b4c801609b20e80676,
+  towerPrefab: {fileID: 1065897407297428, guid: d213908f7b8dc4edbbf4804486429618,
     type: 2}
-  sprite: {fileID: 21300000, guid: 52b418b88c9a01c48aebf6f04abc99fe, type: 3}
+  sprite: {fileID: 21300000, guid: d71b13d780d914c65b307efc4e845816, type: 3}
   price: 5
   priceTxt: {fileID: 60323431}
 --- !u!1 &181809009
@@ -477,7 +477,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 8.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -752,7 +752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80.00006, y: -22.950012}
+  m_AnchoredPosition: {x: 179, y: -22.950012}
   m_SizeDelta: {x: 160, y: 45.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &915045737
@@ -917,7 +917,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 887301f8315a5864eaafd708986309b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 393aa6a5278334564ae777f85e3c4081, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -942,9 +942,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edeeda8306cf34846a2fb7e8de500afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 1494441876796052, guid: a6a01d65ee2848b4c801609b20e80676,
+  towerPrefab: {fileID: 1664290841062126, guid: 205799393f683472a92cf289c211ec25,
     type: 2}
-  sprite: {fileID: 21300000, guid: 52b418b88c9a01c48aebf6f04abc99fe, type: 3}
+  sprite: {fileID: 21300000, guid: 393aa6a5278334564ae777f85e3c4081, type: 3}
   price: 2
   priceTxt: {fileID: 1756055427}
 --- !u!1 &1169136554
@@ -1104,7 +1104,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 887301f8315a5864eaafd708986309b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 264b212dd9b6c45578e8e6f006442c00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1129,9 +1129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edeeda8306cf34846a2fb7e8de500afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 1494441876796052, guid: a6a01d65ee2848b4c801609b20e80676,
+  towerPrefab: {fileID: 1359996221031602, guid: 23b2674096801489dbeff79150ca6929,
     type: 2}
-  sprite: {fileID: 21300000, guid: 52b418b88c9a01c48aebf6f04abc99fe, type: 3}
+  sprite: {fileID: 21300000, guid: 264b212dd9b6c45578e8e6f006442c00, type: 3}
   price: 4
   priceTxt: {fileID: 2102525419}
 --- !u!1 &1197492428
@@ -1168,7 +1168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 32, y: 32}
+  m_AnchoredPosition: {x: 32, y: 432.16385}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1197492430
@@ -1442,7 +1442,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000029206, y: -39.9}
-  m_SizeDelta: {x: 59.84, y: 18.81}
+  m_SizeDelta: {x: 57, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1756055425
 MonoBehaviour:
@@ -1631,7 +1631,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0000044107, y: -39.3}
-  m_SizeDelta: {x: 57.27, y: 17.52}
+  m_SizeDelta: {x: 57, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054933067
 MonoBehaviour:
@@ -1809,7 +1809,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 35, y: -75.6}
-  m_SizeDelta: {x: 53.83, y: 33.14}
+  m_SizeDelta: {x: 57, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102525417
 MonoBehaviour:
@@ -1871,7 +1871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2 gold
+  m_Text: 4 gold
 --- !u!222 &2102525420
 CanvasRenderer:
   m_ObjectHideFlags: 0
