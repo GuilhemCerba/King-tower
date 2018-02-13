@@ -4,8 +4,8 @@ using UnityEngine;
 using System;
 
 public class LevelManager : Singleton<LevelManager>{
-
-	[SerializeField]
+    //6.404986
+    [SerializeField]
 	private GameObject[] tilePrefabs;
 
 	[SerializeField]
@@ -124,6 +124,6 @@ public class LevelManager : Singleton<LevelManager>{
         }
         maxTile = Tiles[new Point(mapXSize - 1, mapYSize - 1)].transform.transform.position;
 
-        cameraMovement.SetLimits(new Vector3(maxTile.x + TileSize, maxTile.y - TileSize -17));
+        cameraMovement.SetLimits(new Vector3(maxTile.x + TileSize, (maxTile.y - TileSize) - 17));
     }
 }
