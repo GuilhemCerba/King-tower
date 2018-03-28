@@ -41,7 +41,7 @@ public class Monster : MonoBehaviour {
    
 
     [SerializeField]
-    private float speed = 0.01f;
+    private float speed = 10f;
 
     [SerializeField]
     private float hitpoints = 100;
@@ -59,6 +59,8 @@ public class Monster : MonoBehaviour {
         transform.position = LevelManager.Instance.EntrancePortal.transform.position;
         start = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height));
         Debug.Log("In Monster start : " + start);
+        Debug.Log("Initial position : " + transform.position);
+
         //start = transform.position; 
         SetupPath();
         
@@ -98,8 +100,8 @@ public class Monster : MonoBehaviour {
 
 
 
-        //if ((path[current_index] - transform.position).magnitude < 0.1f)
-        if (path[current_index] == transform.position)
+        if ((path[current_index] - transform.position).magnitude < 0.1f)
+        //if (path[current_index] == transform.position)
         
         {
             //King reached
