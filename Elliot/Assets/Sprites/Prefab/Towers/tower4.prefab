@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileType: ArrowProjectile
+  projectileSpeed: 3
   attackCooldown: 2
 --- !u!212 &212390457281798060
 SpriteRenderer:

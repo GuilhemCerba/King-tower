@@ -27,13 +27,14 @@ public class LevelManager : Singleton<LevelManager>{
 
 	public Dictionary<Point,TileScript> Tiles { get; set; }
 
+
 	public float TileSize{
 		get { return tilePrefabs[0].GetComponent<SpriteRenderer> ().sprite.bounds.size.x;}
 	}
 
 	void Start(){
 		createLevel ();
-        nextLevel();
+        //nextLevel();
 	}
 
 	void Update(){
@@ -41,6 +42,7 @@ public class LevelManager : Singleton<LevelManager>{
 		
 
 	private void createLevel(){
+        Debug.Log(TileSize);
 
 		Tiles = new Dictionary<Point,TileScript> ();
 		string[] mapData = ReadLevelText("Level");
@@ -51,8 +53,9 @@ public class LevelManager : Singleton<LevelManager>{
 		Vector3 maxTile = Vector3.zero;
 
 		Vector3 start = Camera.main.ScreenToWorldPoint (new Vector3 (0, Screen.height));
+        Debug.Log("In level manager start : " + start);
 
-		for (int y = 0; y < mapYSize; y++) {
+        for (int y = 0; y < mapYSize; y++) {
 			char[] newTiles = mapData[y].ToCharArray();
 
 			for (int x = 0; x < mapXSize; x++) {

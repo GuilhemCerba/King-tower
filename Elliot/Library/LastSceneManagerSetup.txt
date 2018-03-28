@@ -1,4 +1,4 @@
 sceneSetups:
-- path: CISC226Map.unity
+- path: C:/Users/Edzil/Downloads/King-tower-master/King-tower-master/Elliot/CISC226Map.unity
   isLoaded: 1
   isActive: 1
